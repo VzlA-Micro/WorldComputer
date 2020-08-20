@@ -10,7 +10,7 @@ let table = $('#datatable').DataTable({
     searching: true,
     ajax: {
         method: 'POST',
-        url: '/FrameworkJD/cliente/listar'
+        url: '/WorldComputer/cliente/listar'
     },
     columns: [
         { data: 'documento' },
@@ -95,7 +95,7 @@ const registrarCliente = (datos) => {
 
     $.ajax({
         type: "POST",
-        url: "/FrameworkJD/cliente/guardar",
+        url: "/WorldComputer/cliente/guardar",
         data: datos,
         cache: false,
         contentType: false,
@@ -132,7 +132,7 @@ const registrarCliente = (datos) => {
 
 
 
-    // fetch('/FrameworkJD/cliente/guardar', { method: 'POST', body: datos })
+    // fetch('/WorldComputer/cliente/guardar', { method: 'POST', body: datos })
     // .then((response) => {
     //     console.log(response);
     //     return response.json();
@@ -155,7 +155,7 @@ const registrarCliente = (datos) => {
 const actualizarCliente = (datos) => {
     $.ajax({
         type: "POST",
-        url: "/FrameworkJD/cliente/actualizar",
+        url: "/WorldComputer/cliente/actualizar",
         data: datos,
         cache: false,
         contentType: false,
@@ -191,7 +191,7 @@ const actualizarCliente = (datos) => {
 const eliminarCliente = (id) => {
     $.ajax({
         type: "DELETE",
-        url: "/FrameworkJD/cliente/eliminar/" + id,
+        url: "/WorldComputer/cliente/eliminar/" + id,
         success: function (response) {
             const json = JSON.parse(response);
             if(json.tipo == 'success'){

@@ -8,7 +8,7 @@ $(document).ready(function () {
         searching: true,
         ajax: {
             method: 'POST',
-            url: '/FrameworkJD/producto/listar'
+            url: '/WorldComputer/producto/listar'
         },
         columns: [
             { data: 'codigo' },
@@ -57,7 +57,7 @@ $(document).ready(function () {
         
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/unidad/listar",
+            url: "/WorldComputer/unidad/listar",
             success: function (response) {
                 json = JSON.parse(response);
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/categoria/listar",
+            url: "/WorldComputer/categoria/listar",
             success: function (response) {
                 let json = JSON.parse(response);
 
@@ -159,7 +159,7 @@ $(document).ready(function () {
         
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/producto/guardar",
+            url: "/WorldComputer/producto/guardar",
             data: datos,
             cache: false,
             contentType: false,
@@ -200,7 +200,7 @@ $(document).ready(function () {
     const actualizarProducto = (datos) => {
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/producto/actualizar",
+            url: "/WorldComputer/producto/actualizar",
             data: datos,
             cache: false,
             contentType: false,
@@ -237,7 +237,7 @@ $(document).ready(function () {
     const eliminarProducto = (id) => {
         $.ajax({
             type: "DELETE",
-            url: "/FrameworkJD/producto/eliminar/" + id,
+            url: "/WorldComputer/producto/eliminar/" + id,
             success: function (response) {
                 const json = JSON.parse(response);
                 if(json.tipo == 'success'){
@@ -259,7 +259,7 @@ $(document).ready(function () {
     const generarCodigo = ( letra, longitud, numeroFinal, elemento) => {  
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/api/generarCodigo",
+            url: "/WorldComputer/api/generarCodigo",
             data: { letra: letra, longitud: longitud, numero: numeroFinal},
             success: function (response) {
                 let json = JSON.parse(response);

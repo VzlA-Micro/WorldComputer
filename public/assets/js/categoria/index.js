@@ -10,7 +10,7 @@ let table = $('#datatable').DataTable({
     searching: true,
     ajax: {
         method: 'POST',
-        url: '/FrameworkJD/categoria/listar'
+        url: '/WorldComputer/categoria/listar'
     },
     columns: [
         { data: 'nombre' },
@@ -81,7 +81,7 @@ const registrarCategoria = (datos) => {
 
     $.ajax({
         type: "POST",
-        url: "/FrameworkJD/categoria/guardar",
+        url: "/WorldComputer/categoria/guardar",
         data: datos,
         cache: false,
         contentType: false,
@@ -118,7 +118,7 @@ const registrarCategoria = (datos) => {
 
 
 
-    // fetch('/FrameworkJD/categoria/guardar', { method: 'POST', body: datos })
+    // fetch('/WorldComputer/categoria/guardar', { method: 'POST', body: datos })
     // .then((response) => {
     //     console.log(response);
     //     return response.json();
@@ -141,7 +141,7 @@ const registrarCategoria = (datos) => {
 const actualizarCategoria = (datos) => {
     $.ajax({
         type: "POST",
-        url: "/FrameworkJD/categoria/actualizar",
+        url: "/WorldComputer/categoria/actualizar",
         data: datos,
         cache: false,
         contentType: false,
@@ -177,7 +177,7 @@ const actualizarCategoria = (datos) => {
 const eliminarCategoria = (id) => {
     $.ajax({
         type: "DELETE",
-        url: "/FrameworkJD/categoria/eliminar/" + id,
+        url: "/WorldComputer/categoria/eliminar/" + id,
         success: function (response) {
             const json = JSON.parse(response);
             if(json.tipo == 'success'){

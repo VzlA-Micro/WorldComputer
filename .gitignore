@@ -1,6 +1,2 @@
 #Resources
-resources/*
 vendor/*
-public/assets/vendor/*
-composer.json
-composer.lock

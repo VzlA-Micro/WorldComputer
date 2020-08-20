@@ -10,7 +10,7 @@ $(document).ready(function () {
         searching: true,
         ajax: {
             method: 'POST',
-            url: '/FrameworkJD/Usuario/listar'
+            url: '/WorldComputer/Usuario/listar'
         },
         columns: [
             { data: 'documento' },
@@ -116,6 +116,7 @@ $(document).ready(function () {
                 $(formulario).find('input#telefono').val(json.data.telefono);
                 $(formulario).find('input#correo').val(json.data.email);
                 $(formulario).find('input#direccion').val(json.data.direccion);
+                $(formulario).find('input#usuario').val(json.data.usuario);
     
                 $(modal).modal('show');
     
@@ -129,7 +130,7 @@ $(document).ready(function () {
     const registrarUsuario = (datos) => {
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/Usuario/guardar",
+            url: "/WorldComputer/Usuario/guardar",
             data: datos,
             contentType: false,
             processData: false,
@@ -165,7 +166,7 @@ $(document).ready(function () {
         });
 
     
-        // fetch('/FrameworkJD/cliente/guardar', { method: 'POST', body: datos })
+        // fetch('/WorldComputer/cliente/guardar', { method: 'POST', body: datos })
         // .then((response) => {
         //     console.log(response);
         //     return response.json();
@@ -188,7 +189,7 @@ $(document).ready(function () {
     const actualizarUsuario = (datos) => {
         $.ajax({
             type: "POST",
-            url: "/FrameworkJD/Usuario/actualizar",
+            url: "/WorldComputer/Usuario/actualizar",
             data: datos,
             cache: false,
             contentType: false,
@@ -224,7 +225,7 @@ $(document).ready(function () {
     const eliminarUsuario = (id) => {
         $.ajax({
             type: "DELETE",
-            url: "/FrameworkJD/Usuario/eliminar/" + id,
+            url: "/WorldComputer/Usuario/eliminar/" + id,
             success: function (response) {
                 const json = JSON.parse(response);
                 if(json.tipo == 'success'){
@@ -277,7 +278,6 @@ $(document).ready(function () {
         const datos = new FormData(document.querySelector('#formularioActualizarUsuario'));
     
         console.log(datos.get('id'));
-    
         actualizarUsuario(datos);
     });
     

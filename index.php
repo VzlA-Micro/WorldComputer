@@ -1,5 +1,5 @@
 <?php
-require_once 'System/Core/Config.php';
+require_once 'system/Core/Config.php';
 require_once 'vendor/autoload.php';
 
 $router = new \System\Core\Router();

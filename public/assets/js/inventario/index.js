@@ -5,6 +5,7 @@ $(document).ready(function () {
     let table = $('#datatable').DataTable({
         serverSide: false,
         ordering: false,
+        scrollX: true,
         searching: true,
         ajax: {
             method: 'POST',

@@ -1,0 +1,26 @@
+{
+  "name": "worldsys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusarrieche/WorldComputer.git"
+  },
+  "author": "Jesus Arrieche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusarrieche/WorldComputer/issues"
+  },
+  "homepage": "https://github.com/jesusarrieche/WorldComputer#readme",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "sweetalert2": "^9.14.2"
+  }
+}
